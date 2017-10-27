@@ -223,6 +223,7 @@ jobs:
       <<: *ccp_create_params
       vars:
         aws_instance-node-instance_type: m4.large
+        aws_ebs_volume_type: gp2
         number_of_nodes: 1
   - task: gen_cluster
     tags: ["gpdb5_ccp_external_worker"]
@@ -260,6 +261,7 @@ jobs:
       <<: *ccp_create_params
       vars:
         aws_instance-node-instance_type: m4.large
+        aws_ebs_volume_type: gp2
         number_of_nodes: 1
   - task: gen_cluster
     tags: ["gpdb5_ccp_external_worker"]
@@ -297,6 +299,7 @@ jobs:
       <<: *ccp_create_params
       vars:
         aws_instance-node-instance_type: m4.large
+        aws_ebs_volume_type: gp2
         number_of_nodes: 1
   - task: gen_cluster
     tags: ["gpdb5_ccp_external_worker"]

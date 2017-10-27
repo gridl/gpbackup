@@ -23,6 +23,7 @@ run:
     ccp_src/aws/setup_ssh_to_cluster.sh
 
     cat <<SCRIPT > /tmp/run_tests.bash
+    set -ex
         cat << ENV_SCRIPT > env.sh
         export GOPATH=/home/gpadmin/go
         export PATH=\\\$GOPATH/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/go/bin
