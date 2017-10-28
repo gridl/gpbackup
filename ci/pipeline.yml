@@ -221,8 +221,9 @@ jobs:
     tags: ["gpdb5_ccp_external_worker"]
     params:
       <<: *ccp_create_params
+      terraform_source: ccp_src/aws-nvme-block-device/
       vars:
-        aws_instance-node-instance_type: m4.large
+        aws_instance-node-instance_type: i3.large
         aws_ebs_volume_type: gp2
         number_of_nodes: 1
   - task: gen_cluster
@@ -259,8 +260,9 @@ jobs:
     tags: ["gpdb5_ccp_external_worker"]
     params:
       <<: *ccp_create_params
+      terraform_source: ccp_src/aws-nvme-block-device/
       vars:
-        aws_instance-node-instance_type: m4.large
+        aws_instance-node-instance_type: i3.large
         aws_ebs_volume_type: gp2
         number_of_nodes: 1
   - task: gen_cluster
@@ -297,8 +299,9 @@ jobs:
     tags: ["gpdb5_ccp_external_worker"]
     params:
       <<: *ccp_create_params
+      terraform_source: ccp_src/aws-nvme-block-device/
       vars:
-        aws_instance-node-instance_type: m4.large
+        aws_instance-node-instance_type: i3.large
         aws_ebs_volume_type: gp2
         number_of_nodes: 1
   - task: gen_cluster
